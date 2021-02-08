@@ -23,3 +23,9 @@ bundle exec rake db:seed
 cd ./real_estate
 bundle exec sidekiq
 ```
+
+**Start services**
+
+```bash
+cd ./real_estate
+bin/rails s -b 127.0.0.1
