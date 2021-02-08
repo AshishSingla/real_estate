@@ -1,0 +1,15 @@
+current directory: /Users/asingla/Desktop/app/real_estate/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+/System/Library/Frameworks/Ruby.framework/Versions/2.3/usr/bin/ruby -r ./siteconf20210207-51827-1ozzb2e.rb extconf.rb
+creating Makefile
+
+current directory: /Users/asingla/Desktop/app/real_estate/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /Users/asingla/Desktop/app/real_estate/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/asingla/Desktop/app/real_estate/vendor/bundle/ruby/2.3.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.bundle ./.gem.20210207-51827-v4b30d/skiptrace/internal

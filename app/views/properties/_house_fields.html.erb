@@ -1,0 +1,17 @@
+<%= hidden_field_tag :type, 'House' %>
+<%= form.fields_for :additional_fields do |fields| %>
+  <div class="field">
+    <%= fields.label :rooms %>
+    <%= fields.number_field :rooms, value: property.additional_fields['rooms'] %>
+  </div>
+
+  <div class="field">
+    <%= fields.label :floors %>
+    <%= fields.number_field :floors, value: property.additional_fields['floors'] %>
+  </div>
+
+  <div class="field">
+    <%= fields.label :air_conditioner %>
+    <%= fields.check_box :air_conditioner, checked: property.additional_fields['air_conditioner'].present? ? true : false  %>
+  </div>
+<% end %>

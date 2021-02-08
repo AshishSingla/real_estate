@@ -1,0 +1,7 @@
+<%= hidden_field_tag :type, 'ComplexBuilding' %>
+<%= form.fields_for :additional_fields do |fields| %>
+  <div class="field">
+    <%= fields.label :units %>
+    <%= fields.number_field :units, value: property.additional_fields['units'] %>
+  </div>
+<% end %>

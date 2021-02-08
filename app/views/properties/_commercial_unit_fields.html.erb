@@ -1,0 +1,12 @@
+<%= hidden_field_tag :type, 'CommercialUnit' %>
+<%= form.fields_for :additional_fields do |fields| %>
+  <div class="field">
+    <%= fields.label :shops %>
+    <%= fields.number_field :shops, value: property.additional_fields['shops'] %>
+  </div>
+
+  <div class="field">
+    <%= fields.label :parking %>
+    <%= fields.number_field :parking, value: property.additional_fields['parking'] %>
+  </div>
+<% end %>

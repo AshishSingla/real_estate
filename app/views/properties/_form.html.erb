@@ -1,0 +1,52 @@
+<%= form_for(property, :html => { :multipart => true }) do |form| %>
+  <% if property.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(property.errors.count, "error") %> prohibited this property from being saved:</h2>
+
+      <ul>
+      <% property.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%#= form.label :property_type %>
+    <%#= form.select :type, options_for_properties %>
+  </div>
+
+  <div class="field">
+    <%= form.label :owner %>
+    <%= form.text_field :owner %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :sqmt %>
+    <%= form.number_field :sqmt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.number_field :price %>
+  </div>
+
+  <%= render additional_fields, form: form, property: property %>
+
+
+  <%= form.fields_for :property_attachments do |p| %>
+     <div class="field">
+       <%= p.label :select_image %>
+       <%= p.file_field :avatar, :multiple => true, name: "property_attachments[avatar][]" %>
+     </div><br>
+   <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

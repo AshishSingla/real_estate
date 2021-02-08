@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Property Type:</strong>
+  <%= @property.type %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @property.owner %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @property.address %>
+</p>
+
+<p>
+  <strong>Sqmt:</strong>
+  <%= @property.sqmt %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @property.price %>
+</p>
+
+</p>
+<% @property_attachments.each do |p| %>
+  <%= image_tag p.avatar_url, size: '500x500' %>
+  <%= link_to "Edit Attachment", edit_property_attachment_path(p) %>
+<% end %>
+</p>
+
+<%= link_to 'Edit', edit_property_path(@property) %> |
+<%= link_to 'Back', properties_path %>
